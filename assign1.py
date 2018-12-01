@@ -1,14 +1,3 @@
-
-###################################################################
-#
-#   CSSE1001 - Assignment 1
-#
-#   Student Number:43936973
-#
-#   Student Name: WEN-YUAN WILLIAM HSIAO
-#
-###################################################################
-
 #####################################
 # Support given below - DO NOT CHANGE
 #####################################
@@ -16,7 +5,7 @@
 from assign1_support import *
 
 #####################################
-# End of support 
+# End of support
 #####################################
 
 # Add your code here
@@ -48,10 +37,10 @@ def load_dates(stations):
             date, temp = line.split(sep=None)
             date_list += [date]
         return date_list
-        
-        
+
+
 def load_station_data(station):
-    """Returns a list of the temperatures of the inputted station name 
+    """Returns a list of the temperatures of the inputted station name
 
        load_station_data(str) -> list(float)
        """
@@ -81,13 +70,13 @@ def load_all_stations_data(stations):
 def display_maxs(stations, dates, data, start_date, end_date):
     """Returns a table with maximum temperatures of the given stations
        within the dates provided
-       
+
        display_maxs(list, list, list, str, str) -> None
        """
     count = 0
-    
+
     display_stations(stations, 'Date')
-    
+
     for date in dates:
         if date >= start_date:
             print (date, end='    ')
@@ -129,7 +118,7 @@ def temperature_diffs(data, dates, stations, station1, station2, start_date, end
             count += 1
     return temp_diff
 
-            
+
 def display_diffs(diffs, station1, station2):
     """Displays the data from temperature_diffs in a table format
 
@@ -143,15 +132,15 @@ def display_diffs(diffs, station1, station2):
         print (date, end = "  ")
         display_temp(temp)
         print ('', end='\n')
-    
-    
+
+
 def interact():
     """
     Initialises interactive loop
-    
+
     interact() -> None
     """
-    
+
     print ("Welcome to BOM Data")
     print()
     stations = load_stations(input ("Please enter the name of the Stations file: "))
@@ -184,12 +173,12 @@ def interact():
             else:
                 print('Error: Invalid input')
             print()
-                
-    
+
+
 
 ##################################################
 # !!!!!! Do not change (or add to) the code below !!!!!
-# 
+#
 # This code will run the interact function if
 # you use Run -> Run Module  (F5)
 # Because of this we have supplied a "stub" definition
